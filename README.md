@@ -1,1 +1,3 @@
-# simple-clock-vite
+# Simple Clock using Vite
+
+![](/public/screenshot.png)
