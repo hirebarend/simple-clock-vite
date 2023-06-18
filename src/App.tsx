@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import classNames from "classnames";
 import mixpanel from "mixpanel-browser";
 import moment from "moment";
 
@@ -22,15 +23,30 @@ function App() {
   return (
     <div className="align-items-center container d-flex h-100 justify-content-center">
       <div className="d-flex display-1 fw-semibold gap-1 gap-md-3">
-        <div className="p-1 p-md-3 text-primary">
+        <div
+          className={classNames("p-1 p-md-3", {
+            "text-primary": moment(date).minutes() % 2 === 0,
+            "text-secondary": moment(date).minutes() % 2 !== 0,
+          })}
+        >
           {moment(date).format("HH")}
         </div>
         <div className="p-1 py-md-3 text-white">:</div>
-        <div className="p-1 p-md-3 text-primary">
+        <div
+          className={classNames("p-1 p-md-3", {
+            "text-primary": moment(date).minutes() % 2 === 0,
+            "text-secondary": moment(date).minutes() % 2 !== 0,
+          })}
+        >
           {moment(date).format("mm")}
         </div>
         <div className="p-1 py-md-3 text-white">:</div>
-        <div className="p-1 p-md-3 text-primary">
+        <div
+          className={classNames("p-1 p-md-3", {
+            "text-primary": moment(date).minutes() % 2 === 0,
+            "text-secondary": moment(date).minutes() % 2 !== 0,
+          })}
+        >
           {moment(date).format("ss")}
         </div>
         <div className="p-1 p-md-3 text-white">{moment(date).format("A")}</div>
