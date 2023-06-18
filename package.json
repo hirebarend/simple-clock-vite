@@ -7,17 +7,18 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "test": "firebase init hosting"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.0",
+    "mixpanel-browser": "^2.47.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.63.4"
   },
   "devDependencies": {
+    "@types/mixpanel-browser": "^2.38.2",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
